@@ -1,0 +1,77 @@
+
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Drive Renewable Energy provides expert solar solutions including panel installation, borehole services, and battery sales in Zimbabwe.">
+{% load static %}
+{% block content %}
+    <title>About - GREENEDGE ENERGY</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        #about {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .social-icons a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    
+    <section id="about">
+        <h2>About GREENEDGE ENERGY</h2>
+        <p>GREENEDGE ENERGY is Zimbabwe's leading provider of comprehensive solar solutions, including expert <strong>solar panel installation</strong>, <strong>borehole services</strong>, and <strong>solar battery sales</strong>. Based in Harare, we are committed to delivering <strong>renewable energy solutions</strong> that enhance your energy efficiency and sustainability.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 GREENEDGE ENERGY. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61560008484810" target="_blank">Our Facebook Page</a>
+        </div>
+    </footer>
+</body>
+</html>
+{% endblock %}

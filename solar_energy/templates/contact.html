@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us-GREENEDGE ENERGY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:  #178147;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            font-size: 2em;
+            margin-top: 0;
+            color: #007bff;
+            text-align: center;
+        }
+        .container p {
+            color: #666;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .form-group label {
+            text-align: center;
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 50%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .btn {
+            align-content: center;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color:  #178147;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+{% block content %}
+
+<body>
+    <section class="container">
+        <h2>Contact Us</h2>
+    </section>
+    <div class="container">
+        <h2>Get in Touch-GREENEDGE ENERGY</h2>
+        <p>If you have any questions or need support, please fill out the form below and we'll get back to you as soon as possible.</p>
+        <form action="#" method="post">
+        <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <a href="#" class="btn">Send Message</a>
+        </form>
+    </div>
+    <footer>
+        <p>Email: <a href="mailto:driverenewable@gmail.com">driverenewable@gmail.com</a></p>
+        <p>Phone: +263 778 431 791</p>
+        <address>No.5 Kaguvi Street, Harare, CBD</address>
+        <p>&copy; 2024 Pamoja. All rights reserved.</p>
+    </footer>
+</body>
+
+{% endblock %}
+</html>

@@ -1,0 +1,310 @@
+{% extends 'base.html' %}
+{% block title %}
+Products -GREENEDGE ENERGY
+{% endblock %}
+{%load static%}
+{% block content %}
+<head>
+    <style>
+
+/* Call-to-Action Button */
+.cta {
+    background-color: green;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background 0.3s ease;
+    border-radius: 26px;
+}
+
+.cta:hover {
+    background-color: #e67e22;
+}
+    /* Section Styling */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+    /* Product Card Styling */
+    .product-card {
+        background: wheat;
+        margin: 20px;
+        border-radius: 26px;
+        box-shadow: 0 12px 24px /*rgba(0, 0, 0, 0.2)*/; /* Floating shadow effect */
+        padding: 20px;
+        display: inline-block;
+        width: calc(33% - 40px);
+        vertical-align: top;
+        gap: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        width: calc(25% - 20px);
+        border: 5px solid;
+        border-radius: 10px;
+        animation: border-color-change 5s infinite;
+        
+    }
+    
+    @keyframes border-color-change {
+      0% {
+        border-color: red;
+      }
+      25% {
+        border-color: blue;
+      }
+      50% {
+        border-color:darkgreen;
+      }
+      75% {
+        border-color: orange;
+      }
+      100% {
+        border-color: red;
+      }
+    
+    }
+    .product-card:hover {
+        transform: translateY(-10px); /* Lift the card on hover */
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+    }
+    
+    .product-card img {
+        width: 100%;
+        border-radius: 15px;
+    }
+    
+    .product-card h3 {
+        color: #27ae60;
+    }
+    
+    .product-card ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .product-card li {
+        padding: 5px 0;
+    }
+    
+    </style>
+</head>
+        <section class="hero-content">
+            <h1 bold><strong>Our Products and Services</strong></h1>
+            <a href="{% url 'contact' %}" class="cta">Contact Us</a>
+        </section>
+        <section class="product">
+            <h2>Explore Our Energy Solutions</h2>
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <img src="{% static 'images/product1.jpg' %}" alt="1.5 KVA System" class="product-image">
+                <h3>1.5 KVA System</h3>
+                <ul>
+                    <li>2 x 300 Watts Panels</li>
+                    <li>1.5 KVA Hybrid Inverter</li>
+                    <li>12V 100Ah Lithium Battery</li>
+                    <li>Powers lights, TV, entertainment, house fan</li>
+                </ul>
+                <p>Price: $950</p>
+                <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <img src="{% static 'images/product2.jpg' %}" alt="3 KVA Lite System" class="product-image">
+                <h3>3 KVA Lite System</h3>
+                <ul>
+                    <li>2 x 410 Watts Panels</li>
+                    <li>3 KVA Hybrid Inverter</li>
+                    <li>24V 100Ah Lithium Battery</li>
+                    <li>Powers lights, TVs, fridge, borehole pump</li>
+                </ul>
+                <p>Price: $1350</p>
+                <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <img src="{% static 'images/product3.jpg' %}" alt="3 KVA System" class="product-image">
+                <h3>3 KVA System</h3>
+                <ul>
+                    <li>4 x 410 Watts Panels</li>
+                    <li>3 KVA Hybrid Inverter</li>
+                    <li>24V 100Ah Lithium Battery</li>
+                    <li>Powers lights, TVs, fridge, borehole pump</li>
+                </ul>
+                <p>Price: $1550</p>
+                <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <img src="{% static 'images/product4.jpg' %}" alt="5 KVA System" class="product-image">
+                <h3>5 KVA System</h3>
+                <ul>
+                    <li>6 x 410 Watts Panels</li>
+                    <li>5 KVA Hybrid Inverter</li>
+                    <li>48V 100Ah Lithium Battery</li>
+                    <li>Powers lights, TVs, fridge, borehole pump</li>
+                </ul>
+                <p>Price: $2550</p>
+                <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+            </div>
+            <!-- Product Card 5 -->
+            <div class="product-card">
+                <img src="{% static 'images/product5.jpg' %}" alt="6.2 KVA System" class="product-image">
+                <h3>6.2 KVA System</h3>
+                <ul>
+                    <li>10 x 410 Watts Panels</li>
+                    <li>6.2 KVA Hybrid Inverter</li>
+                    <li>48V 200Ah Lithium Battery</li>
+                    <li>Powers lights, TVs, multiple fridges, borehole pump</li>
+                </ul>
+                <p>Price: $3800</p>
+                <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+            </div>
+
+            <!-- Product Card 6 -->
+        <div class="product-card">
+            <img src="{% static 'images/product6.jpg' %}" alt="3.5 KVA System" class="product-image">
+            <h3>3.5 KVA System</h3>
+            <ul>
+                <li>6 x 300 Watts Panels</li>
+                <li>3.5 KVA Hybrid Inverter</li>
+                <li>24V 150Ah Lithium Battery</li>
+                <li>Powers lights, TVs, fridge, and computer</li>
+            </ul>
+            <p>Price: $2,200</p>
+            <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+        </div>
+        <!-- Product Card 7 -->
+        <div class="product-card">
+            <img src="{% static 'images/product7.jpg' %}" alt="1.5 KVA System" class="product-image">
+            <h3>1.5 KVA System</h3>
+            <ul>
+                <li>3 x 200 Watts Panels</li>
+                <li>1.5 KVA Hybrid Inverter</li>
+                <li>12V 100Ah Lithium Battery</li>
+                <li>Powers lights, TV, and laptop</li>
+            </ul>
+            <p>Price: $1,200</p>
+            <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+        </div>
+        <!-- Product Card 8 -->
+        <div class="product-card">
+            <img src="{% static 'images/product8.jpg' %}" alt="10 KVA System" class="product-image">
+            <h3>10 KVA System</h3>
+            <ul>
+                <li>20 x 500 Watts Panels</li>
+                <li>10 KVA Hybrid Inverter</li>
+                <li>96V 400Ah Lithium Battery</li>
+                <li>Powers lights, TVs, multiple fridges, borehole pump, and more</li>
+            </ul>
+            <p>Price: $7,000</p>
+            <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+        </div>
+        <!-- Product Card 9 -->
+        <div class="product-card">
+            <img src="{% static 'images/product9.jpg' %}" alt="4.5 KVA System" class="product-image">
+            <h3>4.5 KVA System</h3>
+            <ul>
+                <li>9 x 320 Watts Panels</li>
+                <li>4.5 KVA Hybrid Inverter</li>
+                <li>48V 250Ah Lithium Battery</li>
+                <li>Powers lights, TVs, fridge, computer, and more</li>
+            </ul>
+            <p>Price: $3,500</p>
+            <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+        </div>
+        <!-- Product Card 10 -->
+        <div class="product-card">
+            <img src="{% static 'images/product10.jpg' %}" alt="2.5 KVA System" class="product-image">
+            <h3>2.5 KVA System</h3>
+            <ul>
+                <li>5 x 250 Watts Panels</li>
+                <li>2.5 KVA Hybrid Inverter</li>
+                <li>24V 150Ah Lithium Battery</li>
+                <li>Powers lights, TV, laptop, and small fridge</li>
+            </ul>
+            <p>Price: $1,800</p>
+            <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+        </div>
+        <!-- Product Card 11 -->
+        <div class="product-card">
+            <img src="{% static 'images/product11.jpg' %}" alt="8 KVA System" class="product-image">
+            <h3>8 KVA System</h3>
+            <ul>
+                <li>16 x 400 Watts Panels</li>
+                <li>8 KVA Hybrid Inverter</li>
+                <li>96V 350Ah Lithium Battery</li>
+                <li>Powers lights, TVs, multiple fridges, borehole pump, and more</li>
+            </ul>
+            <p>Price: $5,500</p>
+            <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+        </div>
+        <!-- Product Card 12 -->
+        <div class="product-card">
+            <img src="{% static 'images/product12.jpg' %}" alt="5 KVA System" class="product-image">
+            <h3>5 KVA System</h3>
+            <ul>
+                <li>10 x 350 Watts Panels</li>
+                <li>5 KVA Hybrid Inverter</li>
+                <li>48V 300Ah Lithium Battery</li>
+                <li>Powers lights, TVs, fridge, computer, and more</li>
+            </ul>
+            <p>Price: $4,000</p>
+            <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+        </div>
+        <!-- Product Card 13 -->
+        <div class="product-card">
+            <img src="{% static 'images/borehle.jpeg' %}" alt="Basic Borehole Drilling Package" class="product-image">
+            <h3>Basic Borehole Drilling Package</h3>
+            <ul>
+                <li>Drilling up to 30 meters deep</li>
+                <li>4-inch casing pipe</li>
+                <li>Submersible pump installation</li>
+                <li>Pipeline installation up to 100 meters</li>
+            </ul>
+            <p>Price: $2,500</p>
+            <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+        </div>
+        <!-- Product Card 14 -->
+        <div class="product-card">
+            <img src="{% static 'images/product14.jpg' %}" alt="Standard Borehole Drilling Package" class="product-image">
+            <h3>Standard Borehole Drilling Package</h3>
+            <ul>
+                <li>Drilling up to 50 meters deep</li>
+                <li>6-inch casing pipe</li>
+                <li>Submersible pump installation</li>
+                <li>Pipeline installation up to 200 meters</li>
+            </ul>
+            <p>Price: $4,000</p>
+            <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+        </div>
+        <!-- Product Card 15 -->
+        <div class="product-card">
+            <img src="{% static 'images/product15.jpg' %}" alt="Premium Borehole Drilling Package" class="product-image">
+            <h3>Premium Borehole Drilling Package</h3>
+            <ul>
+                <li>Drilling up to 100 meters deep</li>
+                <li>8-inch casing pipe</li>
+                <li>Submersible pump installation</li>
+                <li>Pipeline installation up to 500 meters</li>
+            </ul>
+            <p>Price: $6,500</p>
+            <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+        </div>
+        <!-- Product Card 16 -->
+        <div class="product-card">
+            <img src="{% static 'images/product16.jpg' %}" alt="Deluxe Borehole Drilling Package" class="product-image">
+            <h3>Deluxe Borehole Drilling Package</h3>
+            <ul>
+                <li>Drilling up to 150 meters deep</li>
+                <li>10-inch casing pipe</li>
+                <li>Submersible pump installation</li>
+                <li>Pipeline installation up to 1000 meters</li>
+            </ul>
+            <p>Price: $10,000</p>
+            <a href="{% url 'contact' %}" class="cta">Buy Now</a>
+        </div>
+</section>
+{% endblock %}

@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+{% block title %}
+Projects - GREENEDGE ENERGY
+{% endblock %}
+{% load static %}
+{% block content %}
+<head>
+    <style>
+
+/* Project Styling */
+#projects {
+    padding: 40px 40px;
+    border-radius: 26px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Header */
+#projects h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Project Grid */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Project Card */
+.project-card {
+    background: wheat;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Floating shadow effect */
+    overflow: hidden;
+    width: calc(25% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    border: 5px solid;
+    border-radius: 10px;
+    animation: border-color-change 5s infinite;
+   
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.project-card img {
+    margin: 0.25rem 0.25rem;
+    width: 250px;
+    height: 150px;
+    padding: 20px;
+    border-bottom: 2px solid #cccccc;
+    object-fit: cover; /* Add this line */
+}
+
+.project-details {
+    padding: 15px;
+}
+
+.project-title {
+    font-size: 1.5em;
+    margin: 0;
+    color: #27ae60;
+}
+
+.project-description {
+    margin: 10px 0;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #2aa545;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%;
+    }
+}
+/* Section Styling */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+    </style>
+</head>
+<section id="projects" class="container">
+    <h2>Our Projects</h2>
+    <div class="project-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="{% static 'images/rooflay.jpeg' %}" alt="Solar Roof Installation">
+            <div class="project-details">
+                <h5 class="project-title">Solar Roof Installation</h5>
+                <p class="project-description">We installed solar panels on a residential roof, providing clean energy and reducing carbon footprint.</p>
+                <a href="{% url 'contact' %}" class="btn" target="_blank">Get Yours</a>
+            </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="{% static 'images/rooflay2.jpeg' %}" alt="Solar Farm Development">
+            <div class="project-details">
+                <h5 class="project-title">Solar Farm Development</h5>
+                <p class="project-description">We developed a large-scale solar farm, generating renewable energy for the local community.</p>
+                <a href="{% url 'contact' %}" class="btn" target="_blank">Get Yours</a>
+            </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card">
+            <img src="{% static 'images/wallmount.jpeg' %}" alt="Energy Storage Solution">
+            <div class="project-details">
+                <h5 class="project-title">Energy Storage Solution</h5>
+                <p class="project-description">We implemented an energy storage system, enabling efficient energy distribution and reducing grid dependence.</p>
+                <a href="{% url 'contact' %}" class="btn" target="_blank">Get Yours</a>
+            </div>
+        </div>
+        <!-- Project 4 -->
+        <div class="project-card">
+            <img src="{% static 'images/commercial.jpeg' %}" alt="Commercial Solar Installation">
+            <div class="project-details">
+                <h5 class="project-title">Commercial Solar Installation</h5>
+                <p class="project-description">We installed solar panels on a commercial building, reducing energy costs and enhancing sustainability.</p>
+                <a href="{% url 'contact' %}" class="btn" target="_blank">Get Yours</a>
+            </div>
+        </div>
+        <!-- Project 5 -->
+        <div class="project-card">
+            <img src="{% static 'images/Conducting-an-Energy-Audit.jpeg' %}" alt="Residential Energy Audit">
+            <div class="project-details">
+                <h5 class="project-title">Residential Energy Audit</h5>
+                <p class="project-description">We conducted an energy audit for a residential property, identifying areas for energy efficiency improvement.</p>
+                <a href="{% url 'contact' %}" class="btn" target="_blank">Get Yours</a>
+            </div>
+        </div>
+        <!-- Project 6 -->
+        <div class="project-card">
+            <img src="{% static 'images/solar-cleaning.jpeg' %}" alt="Solar Panel Maintenance">
+            <div class="project-details">
+                <h5 class="project-title">Solar Panel Maintenance</h5>
+                <p class="project-description">We provided maintenance services for solar panels, ensuring optimal performance and longevity.</p>
+                <a href="{% url 'contact' %}" class="btn" target="_blank">Get Yours</a>
+            </div>
+        </div>
+        <!-- Project 7 -->
+        <div class="project-card">
+            <img src="{% static 'images/Renewable-Energy-Consulting.jpeg' %}" alt="Renewable Energy Consulting">
+            <div class="project-details">
+                <h5 class="project-title">Renewable Energy Consulting</h5>
+                <p class="project-description">We offered consulting services for renewable energy projects, providing expert guidance and support.</p>
+                <a href="{% url 'contact' %}" class="btn" target="_blank">Get Yours</a>
+            </div>
+        </div>
+        <!-- Project 8 -->
+        <div class="project-card">
+            <img src="{% static 'images/project8.jpg' %}" alt="Solar Water Pumping System">
+            <div class="project-details">
+                <h5 class="project-title">Solar Water Pumping System</h5>
+                <p class="project-description">We installed a solar-powered water pumping system, providing clean water for irrigation and drinking purposes.</p>
+                <a href="{% url 'contact' %}" class="btn" target="_blank">Get Yours</a>
+            </div>
+        </div>
+        <!-- Project 9 -->
+        <div class="project-card">
+            <img src="{% static 'images/project9.jpg' %}" alt="Solar-Powered Street Lights">
+            <div class="project-details">
+                <h5 class="project-title">Solar-Powered Street Lights</h5>
+                <p class="project-description">We installed solar-powered street lights, providing sustainable lighting solutions for public spaces.</p>
+                <a href="{% url 'contact' %}" class="btn" target="_blank">Get Yours</a>
+            </div>
+        </div>
+        <!-- Project 10 -->
+        <div class="project-card">
+            <img src="{% static 'images/project10.jpg' %}" alt="Energy Efficiency Upgrades">
+            <div class="project-details">
+                <h5 class="project-title">Energy Efficiency Upgrades</h5>
+                <p class="project-description">We implemented energy efficiency upgrades for a commercial building, reducing energy consumption and costs.</p>
+                <a href="{% url 'contact' %}" class="btn" target="_blank">Get Yours</a>
+            </div>
+        </div>
+        <!-- Project 11 -->
+        <div class="project-card">
+            <img src="{% static 'images/project11.jpg' %}" alt="Solar-Powered Home">
+            <div class="project-details">
+                <h5 class="project-title">Solar-Powered Home</h5>
+                <p class="project-description">We designed and installed a solar-powered home system, providing clean energy and reducing carbon footprint.</p>
+                <a href="{% url 'contact' %}" class="btn" target="_blank">Get Yours</a>
+            </div>
+        </div>
+        <!-- Project 12 -->
+        <div class="project-card">
+            <img src="{% static 'images/project12.jpg' %}" alt="Community Solar Program">
+            <div class="project-details">
+                <h5 class="project-title">Community Solar Program</h5>
+                <p class="project-description">We developed a community solar program, providing access to clean energy for low-income households.</p>
+                <a href="{% url 'contact' %}" class="btn" target="_blank">Get Yours</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
