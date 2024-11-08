@@ -1,0 +1,307 @@
+{% extends 'base.html' %}
+{% block title %}Home - Drive Renewable Energy{% endblock %}
+{% load static %}
+
+{% block extra_head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Drive Renewable Energy provides comprehensive solar solutions, including solar panel installation, borehole services, and battery sales in Zimbabwe, including Harare.">
+    <meta name="keywords" content="solar panel installation Zimbabwe, borehole services Harare, solar battery sales, solar energy solutions, renewable energy Zimbabwe, solar power systems, eco-friendly energy solutions, green energy Zimbabwe, Harare solar panels">
+    <meta name="author" content="Drive Renewable Energy">
+{% endblock %}
+
+{% block content %}
+<!-- Inline CSS for Home Page -->
+<style>
+
+/*header*/
+/*BODY*/
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    color: #333;
+    background-color:  #178147;
+   
+}
+
+header {
+    padding: 2px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    margin-bottom: 1rem;
+   
+
+  }
+  
+  header img {
+    width: 64px;
+    height: 74px;
+    margin: 0;
+    image-resolution: 100%;
+    border-radius: 30px;
+  }
+  
+    /* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 26px 26px 26px 26px;
+    height: 450px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hero-content,h1 {
+    color: wheat; /* Initial color */
+    animation: infiniteColors 10s infinite linear; /* Apply infinite color animation */
+}
+
+/* Keyframes to infinitely rotate colors */
+@keyframes infiniteColors {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.hero-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    animation: slideAnimation 12s infinite;  
+  
+}
+
+.slide {
+    min-width: 100%;
+    min-height: 100%;
+    transition: transform 1s ease;   
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain; /* or 'contain' depending on your preference */
+}
+#hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 60px 20px;
+}
+
+@keyframes slideAnimation {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+}
+
+.cta {
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 12px 24px;
+    background-color: #e67e22;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #d35400;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Call-to-Action Button */
+.cta {
+    background-color: green;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background 0.3s ease;
+    border-radius: 26px;
+}
+
+.cta:hover {
+    background-color: #e67e22;
+}
+
+/* Section Styling */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* About Section */
+#about {
+    margin-top: 20px;
+    background-color: #61da95;
+    border-radius: 26px;
+}
+
+/* Product Card Styling */
+.product-card {
+    background: wheat;
+    margin: 20px;
+    border-radius: 26px;
+    box-shadow: 0 12px 24px /*rgba(0, 0, 0, 0.2)*/; /* Floating shadow effect */
+    padding: 20px;
+    display: inline-block;
+    width: calc(33% - 40px);
+    vertical-align: top;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    width: calc(25% - 20px);
+    border: 5px solid;
+    border-radius: 10px;
+    animation: border-color-change 5s infinite;
+    
+}
+
+@keyframes border-color-change {
+  0% {
+    border-color: red;
+  }
+  25% {
+    border-color: blue;
+  }
+  50% {
+    border-color:darkgreen;
+  }
+  75% {
+    border-color: orange;
+  }
+  100% {
+    border-color: red;
+  }
+
+}
+.product-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.product-card h3 {
+    color: #27ae60;
+}
+
+.product-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-card li {
+    padding: 5px 0;
+}
+
+    /* Contact Section */
+    #contact {
+        background-color: #f7f7f7;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    #contact a {
+        color: #178147;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    #contact a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<!-- Hero Section -->
+<section>
+    <div class="hero-content">
+        <h1><strong>Welcome to GREENEDGE ENERGY- Your Solar Solution Experts in Zimbabwe</strong></h1>
+        <p><strong>Offering top-notch solar panel installations, borehole services, and high-quality solar batteries throughout Zimbabwe, including Harare. Transform your energy use with our sustainable solutions</strong></p>
+        <a href="{% url 'products' %}" class="cta">Explore Our Solar Products</a>
+        <a href="{% url 'contact' %}" class="cta">Get a Free Quote</a>
+    </div>
+</section>
+
+<!-- Hero Slider -->
+<section class="hero">
+    <div class="hero-slider">
+        <div class="slide">
+            <img src="{% static 'images/greenedge_energy_logo.jpeg' %}" alt="Drive Renewable Energy Logo - Solar Panel Installation Experts" title="Drive Renewable Energy Logo">
+        </div>
+        <div class="slide">
+            <img src="{% static 'images/cover.jpeg' %}" alt="Professional Solar Panel Installation in Harare" title="Professional Solar Panel Installation">
+        </div>
+        <div class="slide">
+            <img src="{% static 'images/solar-cleaning.jpeg' %}" alt="Solar Panel Cleaning Services" title="Solar Panel Cleaning Services">
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="product-card">
+        <h3>Solar Panel Installation</h3>
+        <p>We provide professional installation of <strong>solar panels</strong> for residential and commercial properties. Our systems are designed to deliver efficient and reliable energy solutions.</p>
+    </div>
+    <div class="product-card">
+        <h3>Borehole Services</h3>
+        <p>Offering expert <strong>borehole drilling and maintenance services</strong> to ensure a consistent and reliable water supply for your needs.</p>
+    </div>
+    <div class="product-card">
+        <h3>Solar Battery Sales</h3>
+        <p>We sell high-quality <strong>solar batteries</strong> to store your solar energy, enhancing the efficiency of your solar power system.</p>
+    </div>
+    <div class="product-card">
+        <h3>Comprehensive Solar Solutions</h3>
+        <p>From installation to maintenance, we offer a full range of <strong>solar energy solutions</strong> to meet all your renewable energy needs.</p>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section id="products">
+    <h2>Top Selling Solar Packages</h2>
+    <!-- Product Card 1 -->
+    <div class="product-card">
+        <h3>1.5 KVA Solar Power System</h3>
+        <p>Featuring 2 x 300 Watts Solar Panels, a 1.5 KVA Hybrid Inverter, and a 12V 100Ah Lithium Battery. Ideal for residential use, including powering lights, TV, entertainment systems, and house fans.</p>
+        <p>Price: $950</p>
+        <a href="{% url 'products' %}" class="cta">Learn More About This System</a>
+    </div>
+    <!-- Product Card 2 -->
+    <div class="product-card">
+        <h3>3 KVA Lite Solar Power System</h3>
+        <p>Includes 2 x 410 Watts Solar Panels, a 3 KVA Hybrid Inverter, and a 24V 100Ah Lithium Battery. Suitable for commercial buildings, including powering lights, TVs, fridge, and borehole pumps.</p>
+        <p>Price: $1350</p>
+        <a href="{% url 'products' %}" class="cta">Learn More About This System</a>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact GREENEDGE ENERGY</h2>
+    <p>Email: <a href="mailto:driverenewable@gmail.com">driverenewable@gmail.com</a></p>
+    <p>Phone: <a href="tel:+263778431791">+263 778 431 791</a></p>
+    <address>No.5 Kaguvi Street, Harare, CBD, Zimbabwe - Your Local Experts in Solar Energy and Borehole Services</address>
+</section>
+
+{% endblock %}
